@@ -1,4 +1,4 @@
-### Snail Pic of the Day
+# Snail Pic of the Day
 
 ## About
 
