@@ -98,12 +98,6 @@ nav {
   width: 33px;
 }
 
-.column-1 {
-  //margin-right: 3vw;
-  display: flex;
-  justify-content: center;
-}
-
 .column-2 {
   a {
     backface-visibility: hidden;
@@ -111,11 +105,11 @@ nav {
   }
   display: flex;
   gap: 5rem;
-  //padding-right: 10vw;
 }
 
 .column-3 {
   min-width: 154.7px;
+  padding-left: 2.5rem;
 }
 
 .landing-page {
@@ -176,8 +170,8 @@ nav {
   }
 }
 
-// @media (max-width: 1340px) {
-//   .column-1 {
-//     margin-right: 5%;
-//   }
-// }
+@media (max-width: 800px) {
+  .column-2 {
+    gap: 1.5rem;
+  }
+}
