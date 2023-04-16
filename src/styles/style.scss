@@ -1,0 +1,162 @@
+/* Variables */
+$main-color: hsl(234, 42%, 40%);
+$main-font-color: hsl(0, 0%, 100%);
+$accent-color: rgb(242, 129, 137);
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.3125rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 2.652rem;
+$font-size-4xl: 4rem;
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: $main-font-color;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Styling start */
+body {
+  background-color: $main-color;
+  color: $main-font-color;
+}
+
+a:hover {
+  text-decoration: underline;
+  display: block;
+}
+
+nav {
+  border-bottom: 2px solid white;
+  padding: 2rem 0;
+  font-size: $font-size-lg;
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.logo-text {
+  font-family: "Caveat", cursive;
+  font-size: 1.4rem;
+  color: $accent-color;
+  font-weight: 700;
+}
+
+.logo-pic {
+  height: 33px;
+  width: 33px;
+}
+
+.column-1 {
+  margin-right: auto;
+}
+
+.column-2 {
+  display: flex;
+  gap: 5rem;
+  margin-right: 35%;
+}
+
+.column-3 {
+  margin-right: 2rem;
+}
+
+.landing-page {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.main-landing-page {
+  margin-left: 2%;
+  margin-top: 5%;
+  max-width: 80%;
+  font-size: 5rem;
+}
+
+.landing-paragraph {
+  font-style: italic;
+  animation: fadeIn 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.pink-accent {
+  color: $accent-color;
+}
+
+.landing-link {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-80px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

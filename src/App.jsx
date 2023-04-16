@@ -1,7 +1,11 @@
+import React from "react";
+import LandingPage from "./pages/LandingPage";
+import "./styles/style.scss";
+
 function App() {
   return (
     <div>
-      <p>Hello snail pic app!</p>
+      <LandingPage />
     </div>
   );
 }
