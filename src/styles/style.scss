@@ -80,7 +80,7 @@ nav {
   ul {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 0;
   }
@@ -99,7 +99,9 @@ nav {
 }
 
 .column-1 {
-  margin-right: auto;
+  //margin-right: 3vw;
+  display: flex;
+  justify-content: center;
 }
 
 .column-2 {
@@ -109,11 +111,11 @@ nav {
   }
   display: flex;
   gap: 5rem;
-  margin-right: 35%;
+  //padding-right: 10vw;
 }
 
 .column-3 {
-  margin-right: 2rem;
+  min-width: 154.7px;
 }
 
 .landing-page {
@@ -143,11 +145,16 @@ nav {
 }
 
 .landing-link {
+  font-size: 4.75rem;
   opacity: 0;
 
   a {
     text-decoration-color: $accent-color;
   }
+  border: 3px dashed $accent-color;
+  padding: 0.5rem;
+  max-width: fit-content;
+  border-radius: 10px;
   animation-name: fadeIn;
   animation-delay: 2s;
   animation-duration: 2s;
@@ -168,3 +175,9 @@ nav {
     transform: translate(0, 0);
   }
 }
+
+// @media (max-width: 1340px) {
+//   .column-1 {
+//     margin-right: 5%;
+//   }
+// }
