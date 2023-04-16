@@ -103,6 +103,10 @@ nav {
 }
 
 .column-2 {
+  a {
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1.2);
+  }
   display: flex;
   gap: 5rem;
   margin-right: 35%;
@@ -140,6 +144,10 @@ nav {
 
 .landing-link {
   opacity: 0;
+
+  a {
+    text-decoration-color: $accent-color;
+  }
   animation-name: fadeIn;
   animation-delay: 2s;
   animation-duration: 2s;
