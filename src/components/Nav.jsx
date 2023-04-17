@@ -10,13 +10,13 @@ const Navigation = () => {
         </div>
         <div className="column-2">
           <li>
-            <a href="">Home</a>
+            <a href="">🌿 Home</a>
           </li>
           <li>
-            <a href="">Pics</a>
+            <a href="">🌿 Pics</a>
           </li>
           <li>
-            <a href="">Categories</a>
+            <a href="">🌿 Categories</a>
           </li>
         </div>
         <div className="column-3">
