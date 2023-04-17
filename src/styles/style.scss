@@ -192,19 +192,53 @@ nav {
   opacity: 0.9;
 }
 
-.card-footer {
-  font-family: "Space Mono", monospace;
-  padding: 0 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: grid;
+.card-detail {
   background: hsla(0, 0%, 0%, 0.75);
-  height: 12%;
-  color: white;
-  font-size: $font-size-lg;
-  align-content: center;
+  font-family: "Times New Roman", Times, serif;
+  opacity: 0;
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1em;
+
+  span {
+    font-family: "Space Mono", monospace;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: $accent-color;
+  }
+}
+
+.card-date {
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  background: hsla(0, 0%, 0%, 0.75);
+  position: absolute;
+  inset: auto auto 0px 0px;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-container:hover {
+  .card-detail {
+    opacity: 1;
+
+    transition: opacity 0.5s 0.1s ease-in;
+  }
+  .card-date {
+    opacity: 0;
+  }
+  a {
+    display: inline;
+  }
 }
 
 .pic-page-content {
@@ -235,7 +269,6 @@ nav {
 
 .category-column {
   position: relative;
-  //border: 1px solid white;
   cursor: pointer;
   img {
     height: 100%;
