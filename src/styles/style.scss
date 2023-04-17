@@ -247,8 +247,8 @@ nav {
 
 .pic-page-content {
   display: flex;
-  padding-left: 7.5%;
-  gap: 0.8rem;
+  padding-left: 5%;
+  gap: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   flex-wrap: wrap;
@@ -306,6 +306,19 @@ nav {
 }
 
 /* Media Queries */
+@media (max-width: 950px) {
+  .card-container {
+    width: 13.34rem;
+    height: 20rem;
+  }
+  .pic-page-content {
+    justify-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 800px) {
   .column-2 {
     gap: 1.5rem;
@@ -316,11 +329,6 @@ nav {
 }
 
 @media (max-width: 650px) {
-  // nav {
-  //   ul {
-  //     padding-left: 0;
-  //   }
-  // }
   .column-2 {
     display: none;
   }
