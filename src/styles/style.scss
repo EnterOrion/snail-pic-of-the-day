@@ -309,7 +309,7 @@ nav {
 @media (max-width: 950px) {
   .card-container {
     width: 13.34rem;
-    height: 20rem;
+    height: 20rem; // might make bigger again on mobile
   }
   .pic-page-content {
     justify-content: center;
@@ -348,5 +348,9 @@ nav {
     img {
       margin-right: 0.5rem;
     }
+  }
+  .category-container {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
