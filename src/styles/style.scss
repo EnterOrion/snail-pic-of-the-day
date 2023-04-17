@@ -9,7 +9,8 @@ $font-size-lg: 1.125rem;
 $font-size-xl: 1.3125rem;
 $font-size-2xl: 1.5rem;
 $font-size-3xl: 2.652rem;
-$font-size-4xl: 4rem;
+$font-size-4xl: 3.5rem;
+$font-size-5xl: 4rem;
 
 /* CSS Reset */
 *,
@@ -224,6 +225,47 @@ nav {
     font-style: italic;
     font-size: $font-size-3xl;
   }
+}
+
+.category-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; //change to one column on smaller screens
+}
+
+.category-column {
+  position: relative;
+  //border: 1px solid white;
+  cursor: pointer;
+  img {
+    height: 100%;
+  }
+
+  p {
+    position: absolute;
+    text-align: center;
+    padding-top: 50%;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.541);
+    color: white;
+    font-size: $font-size-4xl;
+  }
+}
+
+.category-column:hover {
+  p {
+    text-decoration: underline;
+    text-decoration-color: $accent-color;
+    background-color: rgba(0, 0, 0, 0.671);
+  }
+}
+
+.category-column + .category-column {
+  border: 1px solid white;
 }
 
 @media (max-width: 800px) {
