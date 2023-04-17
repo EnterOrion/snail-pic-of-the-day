@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Nav";
 
 const LandingPage = () => {
@@ -11,7 +12,7 @@ const LandingPage = () => {
           <span className="pink-accent">snail pics</span> on the internet
         </p>
         <p className="landing-link">
-          <a href=""> Browse?</a>
+          <Link to="/pictures-all"> Browse?</Link>
         </p>
       </main>
     </div>

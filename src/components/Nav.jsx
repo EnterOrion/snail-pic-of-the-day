@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SnailLogo from "../assets/snail.png";
 
 const Navigation = () => {
@@ -10,13 +11,13 @@ const Navigation = () => {
         </div>
         <div className="column-2">
           <li>
-            <a href="">🌿 Home</a>
+            <Link to="/">🌿 Home</Link>
           </li>
           <li>
-            <a href="">🌿 Pics</a>
+            <Link to="/pictures-all">🌿 Pics</Link>
           </li>
           <li>
-            <a href="">🌿 Categories</a>
+            <Link to="/categories">🌿 Categories</Link>
           </li>
         </div>
         <div className="column-3">
