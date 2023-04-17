@@ -22,6 +22,7 @@ const Navigation = () => {
         </div>
         <div className="column-3">
           <img className="logo-pic" src={SnailLogo} alt="" />
+          <div className="mobile-menu"></div>
         </div>
       </ul>
     </nav>
