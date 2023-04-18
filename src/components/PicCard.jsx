@@ -4,7 +4,7 @@ const PicCard = (props) => {
   return (
     <div className="card-container">
       <img className="card-pic" src={props.image} alt={props.alt} />
-      <div class="card-footer">
+      <div className="card-footer">
         <p className="card-date">{props.date}</p>
         <p className="card-detail">
           <span>{props.date} </span> <br />
