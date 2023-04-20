@@ -58,12 +58,17 @@ const LiveCategory = ({ itemsPerPage }) => {
       <Items currentItems={currentItems} />
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel="Next >"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel="< Previous"
         renderOnZeroPageCount={null}
+        containerClassName={"pagination"}
+        previousLinkClassName={"pagination-previous"}
+        nextLinkClassName={"pagination-next"}
+        disabledLinkClassName={"pagination-disabled"}
+        activeLinkClassName={"pagination-active"}
       />
     </div>
   );
