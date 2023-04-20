@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import format from "date-fns/format";
 import ReactPaginate from "react-paginate";
 import Navigation from "../components/Nav";
 import PicCard from "../components/PicCard";
@@ -10,7 +11,7 @@ function Items({ currentItems }) {
         return (
           <PicCard
             image={snailPic.photoUrl}
-            date={snailPic.dateTaken}
+            date={format(new Date(snailPic.dateTaken), "LL/dd/yyyy")}
             category={snailPic.category}
             description={snailPic.description}
           />
