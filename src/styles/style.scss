@@ -222,7 +222,8 @@ nav {
     padding: 0;
   }
 
-  a {
+  .category-link {
+    font-family: "Times New Roman", Times, serif;
     text-decoration: underline;
     text-decoration-color: $accent-color;
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Nav";
 import CartoonSnail from "../assets/2DSnailAlt.jpg";
 import StatueSnail from "../assets/3DSnail.jpg";
@@ -10,16 +11,22 @@ const CategoryPage = () => {
       <Navigation />
       <div className="category-container">
         <div className="category-column">
-          <img src={CartoonSnail} alt="A cartoon snail" />
-          <p>2D Snails</p>
+          <img src={CartoonSnail} alt="A medieval snail" />
+          <Link to="/pictures-2D">
+            <p>2D Snails</p>
+          </Link>
         </div>
         <div className="category-column">
           <img src={StatueSnail} alt="A statue of a snail" />
-          <p>3D Snails</p>
+          <Link to="/pictures-3D">
+            <p>3D Snails</p>
+          </Link>
         </div>
         <div className="category-column">
           <img src={LiveSnail} alt="A snail on a leaf" />
-          <p>Live Snails</p>
+          <Link to="/pictures-live">
+            <p>Live Snails</p>
+          </Link>
         </div>
       </div>
     </div>

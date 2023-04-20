@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PicCard = (props) => {
   return (
@@ -14,7 +15,10 @@ const PicCard = (props) => {
           <span>{props.date} </span> <br />
           <ul>
             <li>
-              <strong>Category:</strong> <a href="">{props.category} snail</a>
+              <strong>Category:</strong>{" "}
+              <Link to={`/pictures-${props.category}`}>
+                <span className="category-link">{props.category} snail</span>
+              </Link>
             </li>
             <li>
               <strong>Description:</strong> {props.description}
