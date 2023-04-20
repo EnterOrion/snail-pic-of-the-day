@@ -1,21 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
 import Navigation from "../components/Nav";
 import PicCard from "../components/PicCard";
-import TestPic from "../assets/testSnailPic.jpg";
 
-const PicPage = () => {
+function Items({ currentItems }) {
+  return (
+    <div className="pic-page-content">
+      {currentItems.map((snailPic) => {
+        return (
+          <PicCard
+            image={snailPic.photoUrl}
+            date={snailPic.dateTaken}
+            category={snailPic.category}
+            description={snailPic.description}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
+const PicPage = ({ itemsPerPage }) => {
+  const [snailPics, setSnailPics] = useState([]);
+  useEffect(() => {
+    fetch("https://snail-pic-api.onrender.com/api/snail-pics")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setSnailPics(data.snailPics);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const endOffset = itemOffset + itemsPerPage;
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const currentItems = snailPics.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(snailPics.length / itemsPerPage);
+
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % snailPics.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+    setItemOffset(newOffset);
+  };
   return (
     <div className="pic-page">
       <Navigation />
       <h1>All pics</h1>
-      <div className="pic-page-content">
-        <PicCard image={TestPic} alt="Test picture of a snail" date="4/4/22" />
-        <PicCard image={TestPic} alt="Test picture of a snail" date="4/4/22" />
-        <PicCard image={TestPic} alt="Test picture of a snail" date="4/4/22" />
-        <PicCard image={TestPic} alt="Test picture of a snail" date="4/4/22" />
-        <PicCard image={TestPic} alt="Test picture of a snail" date="4/4/22" />
-        <PicCard image={TestPic} alt="Test picture of a snail" date="4/4/22" />
-      </div>
+      <Items currentItems={currentItems} />
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+      />
     </div>
   );
 };
