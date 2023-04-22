@@ -393,7 +393,7 @@ nav {
     font-size: 2rem;
   }
   .pagination {
-    padding-left: 2%;
+    gap: 1px;
   }
 
   .column-2 {
@@ -486,11 +486,5 @@ nav {
   .category-container {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 350px) {
-  .pagination {
-    gap: 1px;
   }
 }
