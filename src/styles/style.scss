@@ -227,6 +227,10 @@ nav {
     text-decoration: underline;
     text-decoration-color: $accent-color;
   }
+
+  .category-link:hover {
+    color: $accent-color;
+  }
 }
 
 .card-date {
@@ -311,7 +315,8 @@ nav {
 }
 
 .category-column + .category-column {
-  border: 1px solid white;
+  border-left: 2px solid white;
+  border-right: 1px solid white;
 }
 
 /* Pagination styling */
