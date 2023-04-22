@@ -389,11 +389,16 @@ nav {
 }
 
 @media (max-width: 650px) {
+  .card-container {
+    width: 15.33rem;
+    height: 23rem; // might make bigger again on mobile
+  }
+
   .landing-link {
     font-size: 2rem;
   }
   .pagination {
-    padding-left: 2%;
+    padding-left: 15%;
     a {
       padding: 4px;
       border-radius: 5px;
