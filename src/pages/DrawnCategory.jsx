@@ -3,6 +3,7 @@ import format from "date-fns/format";
 import ReactPaginate from "react-paginate";
 import Navigation from "../components/Nav";
 import PicCard from "../components/PicCard";
+import LoadingIcon from "../assets/spinner.svg";
 
 function Items({ currentItems }) {
   return (
@@ -55,6 +56,9 @@ const DrawnCategory = ({ itemsPerPage }) => {
     <div className="pic-page">
       <Navigation />
       <h1>2D snails</h1>
+      {snailPics.length === 0 && (
+        <img className="loading-icon" src={LoadingIcon} alt="Loading" />
+      )}
       <Items currentItems={currentItems} />
       <ReactPaginate
         breakLabel="..."
