@@ -496,8 +496,13 @@ nav {
     }
   }
   .category-container {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    .category-column {
+      img {
+        min-width: 100%;
+      }
+    }
   }
 
   .category-column + .category-column {
