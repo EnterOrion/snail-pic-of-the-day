@@ -1,8 +1,8 @@
 # Snail Pic of the Day
 
-## About
+![Screenshot of the website](./src/assets/snailPicWebsiteScreenshot.png?raw=true)
 
-**Note: first load may take up to a minute. I'm using a free version to host the REST API. Just be patient! It will load.** <br/>
+## About
 
 I think snails are cute and this is a passion project to help display the collection of snail pictures that I've taken over the years. Plus, I wanted to learn how to use REST APIs, so this was a good opportunity to do so. <br/>
 
