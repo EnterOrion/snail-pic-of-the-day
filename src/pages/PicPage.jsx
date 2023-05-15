@@ -5,6 +5,7 @@ import Navigation from "../components/Nav";
 import PicCard from "../components/PicCard";
 import LoadingIcon from "../assets/spinner.svg";
 
+// Maps the current items for each page into a card component for each one
 function Items({ currentItems }) {
   return (
     <div className="pic-page-content">
@@ -29,6 +30,7 @@ const PicPage = ({ itemsPerPage }) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        // Captures all the snail pics
         setSnailPics(data.snailPics);
       })
       .catch((err) => {
@@ -38,6 +40,7 @@ const PicPage = ({ itemsPerPage }) => {
 
   const [itemOffset, setItemOffset] = useState(0);
 
+  // Handles breaking items evenly into the correct number of pages and displaying the correct batch
   const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = snailPics.slice(itemOffset, endOffset);
@@ -49,6 +52,7 @@ const PicPage = ({ itemsPerPage }) => {
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
     );
+    // Changes offset to get the next batch of snail pics and puts the user back at the top of the page
     setItemOffset(newOffset);
     window.scrollTo({ top: 0 });
   };

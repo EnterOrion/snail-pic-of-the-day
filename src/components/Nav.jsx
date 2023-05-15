@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import SnailLogo from "../assets/snail.png";
 
 const Navigation = () => {
+  // Handles state of hamburger menu: if clicked, the menu will be rendered
   const [menuClicked, setMenuClicked] = useState(false);
+
+  // Handles the animation for the hamburger menu icon on mobile
   const [animate, setAnimate] = useState(0);
   const clickHandler = () => {
     setMenuClicked(!menuClicked);
